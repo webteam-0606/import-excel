@@ -14,7 +14,7 @@ def createtable():
     sheet_names = data.sheet_names()
     table_one = data.sheet_by_index(0)
     # print("all cols name of a single sheet:", table_one.row_values(0))
-    conn = psycopg2.connect(database='uploadsearch', user='postgres', password='postgres', host='localhost')
+    conn = psycopg2.connect(database='postgres-uploadsearch', user='postgres', password='postgres', host='localhost')
     cur = conn.cursor()
     for i in range(0, len(sheet_names)):
         #当前sheet的名字
